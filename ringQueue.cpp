@@ -34,7 +34,7 @@ void ringQueue::pushRandom()
 {
 	if (!isFull()) {
 		if (front == -1) front = 0;
-		rear++; count++;
+		rear = (rear +1 )%SIZE; count++;
 		srand(time(0));
 		int value{ 0 };
 		value = rand() % 100;
@@ -53,7 +53,7 @@ void ringQueue::pop()
 		if (front == rear) {
 			initRingQueue();
 		} else{
-			front++;
+			front = (front +1)%SIZE;
 		}
 		std::cout << "Удален элемент из начала очереди: " << value << std::endl;
 		count--;
@@ -63,7 +63,7 @@ void ringQueue::pop()
 	}
 }
 
-void ringQueue::returnStack()
+void ringQueue::returnStateQueue()
 {
 	std::cout << std::endl << "Текущее состояние очереди: " << std::endl;
 	if (isEmpty()) {

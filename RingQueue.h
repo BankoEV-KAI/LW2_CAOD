@@ -4,7 +4,7 @@
 /*FRONT указывает на первый элемент очереди.
 REAR указывает на последний элемент очереди.*/
 
-const int SIZE{ 10 };
+const int SIZE{ 3 };
 
 struct ringQueue {
     int front, rear, count;
@@ -13,12 +13,10 @@ struct ringQueue {
     void initRingQueue();
     bool isEmpty();
     bool isFull();
-    void push(int value);
+    void push(int value); //enqueue
     void pushRandom();
-    void pop();
-    void returnStack();
-    
-    
+    void pop(); //dequeue
+    void returnStateQueue();
 };
 
 

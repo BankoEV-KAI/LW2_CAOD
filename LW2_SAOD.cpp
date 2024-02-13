@@ -1,4 +1,4 @@
-﻿// First LW SAOD summer 2024 zadanie from r1, t2, z5
+﻿//Вторая ЛР по САОДу задание 1.2.5 
 
 #include "RingQueue.h"
 #include "Menu.h"
@@ -34,14 +34,14 @@ int main()
                 exampleQueue.push(value);
             }
             else { exampleQueue.pushRandom(); }
-            exampleQueue.returnStack();
+            exampleQueue.returnStateQueue();
             break;
         case 4:
             exampleQueue.pop();
-            exampleQueue.returnStack();
+            exampleQueue.returnStateQueue();
             break;
         case 5:
-            exampleQueue.returnStack();
+            exampleQueue.returnStateQueue();
             break;
         case 0:
             return 0;
